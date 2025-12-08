@@ -1,6 +1,10 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App';
+import { FileService } from './services/FileService';
+
+// Initialize photos directory
+FileService.ensurePhotosDirectory();
 
 const container = document.getElementById('root');
 const root = createRoot(container!);
