@@ -1,0 +1,32 @@
+.map-empty-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--ion-color-medium);
+}
+
+.custom-marker {
+  background: transparent !important;
+  border: none !important;
+}
+
+.map-popup {
+  text-align: center;
+  min-width: 150px;
+}
+
+.popup-image {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.popup-date {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
