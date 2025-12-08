@@ -1,0 +1,7 @@
+{
+  "name": "Santa's Delivery Tracker",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
