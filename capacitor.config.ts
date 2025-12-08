@@ -4,6 +4,9 @@ const config: CapacitorConfig = {
   appId: 'io.ionic.santasdelivery',
   appName: "Santa's Delivery Tracker",
   webDir: 'dist',
+  server: {
+    androidScheme: 'https'
+  },
   plugins: {
     Camera: {
       permissions: {

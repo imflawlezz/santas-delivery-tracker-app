@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Santa\'s Delivery Tracker</string>
+    <string name="title_activity_main">Santa\'s Delivery Tracker</string>
+    <string name="package_name">io.ionic.santasdelivery</string>
+    <string name="custom_url_scheme">io.ionic.santasdelivery</string>
+</resources>

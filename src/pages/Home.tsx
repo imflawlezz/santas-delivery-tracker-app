@@ -1,4 +1,4 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonList, IonItem, IonThumbnail, IonLabel, IonIcon, IonFab, IonFabButton, IonRefresher, IonRefresherContent, RefresherEventDetail } from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonList, IonItem, IonThumbnail, IonLabel, IonIcon, IonFab, IonFabButton, useIonViewWillEnter } from '@ionic/react';
 import { add, location as locationIcon } from 'ionicons/icons';
 import { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
@@ -20,10 +20,9 @@ const Home: React.FC = () => {
     loadLocations();
   }, []);
 
-  const handleRefresh = async (event: CustomEvent<RefresherEventDetail>) => {
-    await loadLocations();
-    event.detail.complete();
-  };
+  useIonViewWillEnter(() => {
+    loadLocations();
+  });
 
   const getImageSrc = async (photoPath: string): Promise<string> => {
     try {
@@ -46,10 +45,6 @@ const Home: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-        <IonRefresher slot="fixed" onIonRefresh={handleRefresh}>
-          <IonRefresherContent></IonRefresherContent>
-        </IonRefresher>
-
         {locations.length === 0 ? (
           <div className="empty-state">
             <IonIcon icon={locationIcon} size="large" color="medium" />

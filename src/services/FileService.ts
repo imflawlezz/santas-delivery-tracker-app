@@ -8,9 +8,13 @@ export class FileService {
         directory: Directory.Data,
         recursive: true
       });
-    } catch (error) {
-      // Directory might already exist, which is fine
-      console.log('Photos directory check:', error);
+    } catch (error: any) {
+      if (error?.code === 'OS-PLUG-FILE-0010' || 
+          error?.message?.includes('already exists') ||
+          error?.errorMessage?.includes('already exists')) {
+        return;
+      }
+      console.log('Photos directory check error:', error);
     }
   }
 }
