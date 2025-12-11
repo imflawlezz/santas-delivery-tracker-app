@@ -5,7 +5,7 @@ import { Capacitor } from '@capacitor/core';
 export class PermissionService {
   static async requestCameraPermission(): Promise<boolean> {
     if (Capacitor.getPlatform() === 'web') {
-      return true; // Web doesn't need explicit permission requests
+      return true;
     }
 
     try {
@@ -25,7 +25,7 @@ export class PermissionService {
 
   static async requestLocationPermission(): Promise<boolean> {
     if (Capacitor.getPlatform() === 'web') {
-      return true; // Web doesn't need explicit permission requests
+      return true;
     }
 
     try {

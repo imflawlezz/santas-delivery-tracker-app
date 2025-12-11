@@ -41,8 +41,7 @@ const Detail: React.FC = () => {
     const loaded = await StorageService.getLocation(id);
     if (loaded) {
       setLocation(loaded);
-      
-      // Load image
+
       try {
         const file = await Filesystem.readFile({
           path: loaded.photoPath,

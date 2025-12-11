@@ -3,7 +3,7 @@ export interface DeliveryLocation {
   name: string;
   description: string;
   photoPath: string;
-  date: string; // ISO date string
+  date: string;
   latitude: number;
   longitude: number;
 }
