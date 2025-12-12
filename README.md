@@ -1,6 +1,6 @@
 # Santa's Delivery Tracker
 
-An Ionic project built with React, TypeScript, and Vite to track deliveries.
+An Ionic project built with React, TypeScript, and Vite to track Santa's deliveries.
 
 ## Usage
 
